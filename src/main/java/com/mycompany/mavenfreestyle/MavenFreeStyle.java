@@ -5,6 +5,8 @@
 
 package com.mycompany.mavenfreestyle;
 
+import sun.jvm.hotspot.HelloWorld;
+
 /**
  *
  * @author olivert
@@ -15,10 +17,18 @@ public class MavenFreeStyle {
         System.out.println("Hello World!");
     }
     
-    public int fibonacci(int a){	
-	if (a >= 2){
-            return (fibonacci(a-1) + fibonacci(a-2));
-	}
-	return 0;
+    
+    public static int fibonacci(int a){	
+        
+        if (a == 0){
+            //System.out.println("0");
+            return 0;
+        }else if (a == 1){
+            //System.out.println("1");
+            return 1;
+	}else{
+            //System.out.println((fibonacci(a-1) + fibonacci(a-2))); 
+            return fibonacci(a-1) + fibonacci(a-2);
+        }
     }
 }

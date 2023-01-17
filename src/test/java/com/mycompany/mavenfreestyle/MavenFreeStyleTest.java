@@ -13,11 +13,27 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author olivert
+ * @author theju
  */
 public class MavenFreeStyleTest {
     
     public MavenFreeStyleTest() {
+    }
+    
+    @BeforeAll
+    public static void setUpClass() {
+    }
+    
+    @AfterAll
+    public static void tearDownClass() {
+    }
+    
+    @BeforeEach
+    public void setUp() {
+    }
+    
+    @AfterEach
+    public void tearDown() {
     }
 
     /**
@@ -32,17 +48,44 @@ public class MavenFreeStyleTest {
         fail("The test case is a prototype.");
     }
 
-    @Test 
-    public void testFibonacci(){
-        //App test = new App();
+    /**
+     * Test of fibonacci method, of class MavenFreeStyle.
+     */
+    @Test
+    public void testFibonacci() {
+        System.out.println("fibonacci");
+        int a = 1;
         MavenFreeStyle instance = new MavenFreeStyle();
-	assertTrue(instance.fibonacci(1) == 1);
+        int expResult = 1;
+        int result = instance.fibonacci(a);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
-    @Test	
-    public void testFibonacci2(){
-	//App test = new App();
+        
+    @Test
+       public void testFibonacci2() {
+        System.out.println("fibonacci2");
+        int a = 10;
         MavenFreeStyle instance = new MavenFreeStyle();
-        assertTrue(instance.fibonacci(10) == 5);
+        int expResult = 55;
+        int result = instance.fibonacci(a);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+    
+    @Test
+    public void testFibonacci3() {
+        System.out.println("fibonacci3");
+        int a = 2;
+        MavenFreeStyle instance = new MavenFreeStyle();
+        int expResult = 1;
+        int result = instance.fibonacci(a);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    
     }
     
 }
